@@ -8,57 +8,57 @@ API server for <a style="color:#413e77; font-weight: bold" href="https://gitlab.
 
 ### Available endpoints
 
-- **Languages**
+**Languages**
 
-  Description: Get available languages for man pages  
-  URL: /languages  
-  Method: GET  
-  Query Parameters: none
+- Description: Get available languages for man pages
+- URL: /languages
+- Method: GET
+- Query Parameters: none
 
-  Example:
+Example:
 
-  ```sh
-  GET /languages
-  ```
+```sh
+GET /languages
+```
 
-  <hr>
+<hr>
 
-- **Utilities**
+**Utilities**
 
-  Description: Get list of utilities available for selected platform  
-  URL: /utilities  
-  Method: GET  
-  Query Parameters:  
+- Description: Get list of utilities available for selected platform
+- URL: /utilities
+- Method: GET
+- Query Parameters:
   | Parameter | Type | Required? | Possible values |
   | :--- | :------: | ----: | ----: |
   | lang | string | yes | see https://github.com/tldr-pages/tldr
   | platform | string | yes | android, common, linux, osx, windows |
 
-  Example:
+Example:
 
-  ```sh
-  GET /utilities?lang=en&platform=linux
-  ```
+```sh
+GET /utilities?lang=en&platform=linux
+```
 
-    <hr>
+<hr>
 
-- **Utility**
+**Utility**
 
-  Description: Get man page for selected utility  
-  URL: /utility  
-  Method: GET  
-  Query Parameters:
+- Description: Get man page for selected utility
+- URL: /utility
+- Method: GET
+- Query Parameters:
   | Parameter | Type | Required? | Possible values |
   | :--- | :------: | ----: | ----: |
   | lang | string | yes | see https://github.com/tldr-pages/tldr
   | platform | string | yes | android, common, linux, osx, windows |
   | utility | string | yes | see https://github.com/tldr-pages/tldr |
 
-  Example:
+Example:
 
-  ```sh
-  GET /utility?lang=de&platform=osx&utility=ls
-  ```
+```sh
+GET /utility?lang=de&platform=osx&utility=ls
+```
 
 ### How to use?
 
