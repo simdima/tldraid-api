@@ -10,9 +10,9 @@ API server for <a style="color:#413e77; font-weight: bold" href="https://gitlab.
 
 - **Languages**
 
-  Description: Get available languages for man pages
-  URL: /languages
-  Method: GET
+  Description: Get available languages for man pages  
+  URL: /languages  
+  Method: GET  
   Query Parameters: none
 
   Example:
@@ -25,10 +25,10 @@ API server for <a style="color:#413e77; font-weight: bold" href="https://gitlab.
 
 - **Utilities**
 
-  Description: Get list of utilities available for selected platform
-  URL: /utilities
-  Method: GET
-  Query Parameters:
+  Description: Get list of utilities available for selected platform  
+  URL: /utilities  
+  Method: GET  
+  Query Parameters:  
   | Parameter | Type | Required? | Possible values |
   | :--- | :------: | ----: | ----: |
   | lang | string | yes | see https://github.com/tldr-pages/tldr
@@ -40,11 +40,13 @@ API server for <a style="color:#413e77; font-weight: bold" href="https://gitlab.
   GET /utilities?lang=en&platform=linux
   ```
 
+    <hr>
+
 - **Utility**
 
-  Description: Get man page for selected utility
-  URL: /utility
-  Method: GET
+  Description: Get man page for selected utility  
+  URL: /utility  
+  Method: GET  
   Query Parameters:
   | Parameter | Type | Required? | Possible values |
   | :--- | :------: | ----: | ----: |
