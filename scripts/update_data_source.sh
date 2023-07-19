@@ -14,13 +14,15 @@ update_data_dir() {
 }
 
 # Download source data if it doesn't exist
-if [ -z "$(ls -A src/data)" ]; then
+if [ ! -d src/data ]; then
   echo "Data source is empty. Downloading..."
 
   # Download tldr
   mkdir scripts/tmp
   git clone https://github.com/tldr-pages/tldr.git scripts/tmp/tldr
   latest_ver=$(git -C scripts/tmp/tldr tag | tail -n 1)
+
+  mkdir src/data
 
   update_data_dir
 
