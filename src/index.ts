@@ -23,4 +23,4 @@ app.get('/utilities', getUtilities);
 app.get('/utility', getUtility);
 
 // start the server
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, () => console.log('Server is listening on port', process.env.PORT));

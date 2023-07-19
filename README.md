@@ -105,6 +105,7 @@ APP_URL=[URL_OF_YOUR_FRONT_END_INSTANCE]\
 " > .env
 
 npm i(nstall)
+npm run update_source
 
 npm run dev
 ```
