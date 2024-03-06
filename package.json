@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc",
     "dev": "nodemon",
-    "start": "npm run download_tldr_data && run compile && node -r dotenv-safe/config -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
+    "start": "npm run download_tldr_data && npm run compile && node -r dotenv-safe/config -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
     "download_tldr_data": "bash ./scripts/download_tldr_data.sh"
   },
   "keywords": [],
