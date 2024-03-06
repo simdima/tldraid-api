@@ -7,21 +7,18 @@ export default async function (_: Request, res: LanguagesResponse) {
   try {
     const files = await readdir(DATA_DIR);
 
-    const data = files.reduce<Languages>(
-      (target, file) => {
-        if (!/^pages./.test(file)) {
-          return target;
-        }
+    const data = files.reduce<Languages>((target, file) => {
+      if (!/^pages./.test(file)) {
+        return target;
+      }
 
-        const [, languageISO] = file.split('.');
-        if (!languageISO) {
-          return target;
-        }
+      const [, languageISO] = file.split('.');
+      if (!languageISO) {
+        return target;
+      }
 
-        return [...target, languageISO];
-      },
-      ['en']
-    );
+      return [...target, languageISO];
+    }, []);
 
     res.status(200).json({
       data,
