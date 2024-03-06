@@ -61,7 +61,7 @@ GET /utility?lang=de&platform=osx&utility=ls
 ### How to use?
 
 **Option #1**
-The working instance of the API server can be found <a style="color:#413e77; font-weight: bold" href="https://tldraidapi.simlabs.dev">here</a> (currently available only in Estonia)
+The working instance of the API server can be found [here](https://tldraidapi.simlabs.dev) (currently available only for users located in Estonia)
 
 **Option #2**
 Run it locally using Docker.
@@ -103,7 +103,7 @@ APP_URL=[URL_OF_YOUR_FRONT_END_INSTANCE]\
 " > .env
 
 npm i(nstall)
-npm run update_source
+npm run download_tldr_data # to download the latest versions of manpages from tldr repo
 
 npm run dev
 ```
