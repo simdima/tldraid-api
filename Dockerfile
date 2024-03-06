@@ -8,8 +8,6 @@ RUN npm i
 
 COPY . .
 
-RUN npm run update_source
-
 EXPOSE 5510
 
 CMD ["npm", "run", "start"]

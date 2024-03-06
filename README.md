@@ -2,9 +2,7 @@
 
 ### Description
 
-API server for <a style="color:#413e77; font-weight: bold" href="https://gitlab.com/dsim/tldraid">tldrAId</a> web app
-
-> Man pages were downloaded from https://github.com/tldr-pages/tldr project (coming soon: check and download source files from tldr repo on project start/deployment)
+API server for [tldrAId](https://github.com/simdima/tldraid) web app
 
 ### Available endpoints
 
