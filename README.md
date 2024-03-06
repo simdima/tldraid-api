@@ -61,7 +61,7 @@ GET /utility?lang=de&platform=osx&utility=ls
 ### How to use?
 
 **Option #1**
-The working instance of the API server can be found [here](https://tldraidapi.simlabs.dev) (currently available only for users located in Estonia)
+The working instance of the API server can be found [here](https://tldraidapi.simlabs.dev) (currently available only to users located in Estonia)
 
 **Option #2**
 Run it locally using Docker.
