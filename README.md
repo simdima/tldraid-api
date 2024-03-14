@@ -57,7 +57,32 @@ GET /utilities/common/en/ls
 
 ## How to use?
 
-- TBD
+**_Option #1_**
+The working instance of the API server can be found [here](https://tldraidapi.simlabs.dev) (currently available only to users located in Estonia)
+
+**_Option #2_**
+Run it using Docker.
+
+1. Download the latest release archive, extract the files to the directory of your choosing and navigate inside
+
+2. Create an environment file and add a port you want this application to run on:
+
+```sh
+# Change port if needed
+touch .env && echo "PORT=5510" > .env
+```
+
+3. Build a Docker image _(change EXPOSE variable if needed)_
+
+```sh
+docker build -t tldraid-api:{tag} .
+```
+
+4. Spin up a Docker container _(change ports according to your setup)_
+
+```sh
+docker run --name tldraid-api -p 5510:5510 -d tldraid-api:{tag}
+```
 
 ## Development
 
