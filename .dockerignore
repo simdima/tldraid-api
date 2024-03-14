@@ -1,5 +1,0 @@
-dist
-node_modules
-Dockerfile
-.DS_Store
-src/data

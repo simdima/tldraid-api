@@ -1,4 +1,11 @@
-# Changelog
+# What's changed?
+
+## 2.0.0 - 2024-03-14
+
+### Added
+
+- New version of the API server built with NestJS
+- Refactored endpoints
 
 ## 1.1.3 - 2024-03-06
 
