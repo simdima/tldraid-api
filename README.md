@@ -58,7 +58,7 @@ GET /utilities/common/en/ls
 ## How to use?
 
 **_Option #1_**
-The working instance of the API server can be found [here](https://tldraidapi.simlabs.dev) (currently available only to users located in Estonia)
+The working instance of the API server can be found [here](https://tldraidapi.simlabs.dev)
 
 **_Option #2_**
 Run it using Docker.
