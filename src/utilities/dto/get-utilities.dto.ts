@@ -1,4 +1,5 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
+
 import { Platform } from '../utilities.service';
 
 export class GetUtilitiesDto {

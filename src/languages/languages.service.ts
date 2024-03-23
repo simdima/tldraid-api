@@ -1,6 +1,7 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { readdir } from 'fs/promises';
-import { DATA_DIR } from 'src/config';
+
+import { DATA_DIR } from '../config';
 
 export type Languages = string[];
 
@@ -8,25 +9,34 @@ export type Languages = string[];
 export class LanguagesService {
   protected languages: Languages = [];
 
-  constructor() {
+  constructor(private readonly logger: Logger) {
     this.generateLanguagesStruct();
   }
 
   async generateLanguagesStruct() {
-    const files = await readdir(DATA_DIR);
+    try {
+      this.logger.log('Generating languages structure', LanguagesService.name);
 
-    this.languages = files.reduce<Languages>((target, file) => {
-      if (!/^pages./.test(file)) {
-        return target;
-      }
+      const files = await readdir(DATA_DIR);
 
-      const [, languageISO] = file.split('.');
-      if (!languageISO) {
-        return target;
-      }
+      this.languages = files.reduce<Languages>((target, file) => {
+        if (!/^pages./.test(file)) {
+          return target;
+        }
 
-      return [...target, languageISO];
-    }, []);
+        const [, languageISO] = file.split('.');
+        if (!languageISO) {
+          return target;
+        }
+
+        return [...target, languageISO];
+      }, []);
+    } catch (error) {
+      this.logger.error(
+        `Failed to generate languages structure. ${JSON.stringify(error)}}`,
+        LanguagesService.name
+      );
+    }
   }
 
   getAll() {
