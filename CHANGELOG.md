@@ -1,5 +1,11 @@
 # What's changed?
 
+## 2.0.3 - 2024-03-23
+
+### Added
+
+- [helmet](https://www.npmjs.com/package/helmet) middleware
+
 ## 2.0.2 - 2024-03-23
 
 ### Added

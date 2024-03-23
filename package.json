@@ -1,6 +1,6 @@
 {
   "name": "tldraid-api",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "API server for tldrAId web app",
   "author": "Dima Sim",
   "private": true,
@@ -28,6 +28,7 @@
     "@nestjs/platform-express": "^10.0.0",
     "@swc/cli": "^0.3.10",
     "@swc/core": "^1.4.7",
+    "helmet": "^7.1.0",
     "nest-winston": "^1.9.4",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
