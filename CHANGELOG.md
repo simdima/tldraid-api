@@ -1,5 +1,23 @@
 # What's changed?
 
+## 2.0.3 - 2024-03-23
+
+### Added
+
+- [helmet](https://www.npmjs.com/package/helmet) middleware
+
+## 2.0.2 - 2024-03-23
+
+### Added
+
+- Logging with [winston](https://www.npmjs.com/package/winston)
+
+## 2.0.1 - 2024-03-23
+
+### Added
+
+- Root endpoint returns current app version information
+
 ## 2.0.0 - 2024-03-14
 
 ### Added

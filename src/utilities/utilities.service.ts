@@ -1,14 +1,14 @@
 import {
   BadRequestException,
   Injectable,
+  Logger,
   NotFoundException,
 } from '@nestjs/common';
-
 import { readFile, readdir } from 'fs/promises';
-
 import { join } from 'path';
-import { DATA_DIR } from 'src/config';
-import { LanguagesService } from 'src/languages/languages.service';
+
+import { DATA_DIR } from '../config';
+import { LanguagesService } from '../languages/languages.service';
 
 export type Platform = 'android' | 'common' | 'linux' | 'osx' | 'windows';
 type UtilityParams = {
@@ -21,7 +21,10 @@ type UtilityParams = {
 export class UtilitiesService {
   private utilities: string[] = [];
 
-  constructor(private readonly languageService: LanguagesService) {}
+  constructor(
+    private readonly languageService: LanguagesService,
+    private readonly logger: Logger
+  ) {}
 
   async getAllForCurrentPlatform(platform: Platform) {
     const files = await readdir(join(DATA_DIR, `/pages/${platform}`));
