@@ -1,5 +1,11 @@
 # What's changed?
 
+## 2.0.2 - 2024-03-23
+
+### Added
+
+- Logging with [winston](https://www.npmjs.com/package/winston)
+
 ## 2.0.1 - 2024-03-23
 
 ### Added
