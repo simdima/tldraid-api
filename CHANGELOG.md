@@ -1,5 +1,11 @@
 # What's changed?
 
+## 2.0.1 - 2024-03-23
+
+### Added
+
+- Root endpoint returns current app version information
+
 ## 2.0.0 - 2024-03-14
 
 ### Added
